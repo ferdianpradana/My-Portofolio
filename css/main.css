@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*Header*/
+header.navbar-container {
+  width: auto;
+  max-width: 1200px;
+  padding-block: 1rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  z-index: 9999;
+}
+header.navbar-container .nav-list ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+header.navbar-container .nav-list li a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+header.navbar-container .nav-list li:hover a {
+    background-color: #4793AF;
+    color: white;
+}
+
+/* conten */
+main{
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-block: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+main .content-left .content-description {
+  flex: 1;
+}
+
+main .content-left .content-description .title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+main .content .content-description p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-block: 1rem;
+}
+
+main .content-left .content-description button {
+  padding: 0.8rem 2.5rem;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  margin-block-start: 1rem;
+  background-color: #FFC470;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+main .content-left .content-description button:hover {
+  border: 3px solid #2d3e50;
+  background-color: transparent;
+  color: black
+}
+.Foto-right img {
+  width: 700px; /* Atur lebar gambar */
+  height: auto; /* Biarkan tinggi gambar menyesuaikan proporsi secara otomatis */
+}
+
+
+@media screen and (max-width: 768px) {
+  header.navbar-container {
+    flex-direction: column;
+  }
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+  main{
+    width: auto;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-block: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .Foto-right img {
+    width: 500px; /* Atur lebar gambar */
+    height: auto; /* Biarkan tinggi gambar menyesuaikan proporsi secara otomatis */
+  }
+}
